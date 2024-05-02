@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ma Soundboard</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div id="soundboard">
+      <button id="son1" class="son">Jouer son 1</button>
+      <button id="son2" class="son">Jouer son 2</button>
+      <button id="son3" class="son">Jouer son 3</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+CSS (styles.css):
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+#soundboard {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.son {
+  width: 200px;
+  height: 200px;
+  font-size: 24px;
+  border-radius: 50%;
+  margin: 10px;
+  border: none;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.son:focus {
+  outline: none;
+}
+
+JavaScript (script.js):
+
+const son1 = new Audio('son1.mp3');
+const son2 = new Audio('son2.mp3');
+const son3 = new Audio('son3.mp3');
+
+document.getElementById('son1').addEventListener('click', () => {
+  son1.play();
+});
+
+document.getElementById('son2').addEventListener('click', () => {
+  son2.play();
+});
+
+document.getElementById('son3').addEventListener('click', () => {
+  son3.play();
+});
